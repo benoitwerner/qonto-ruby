@@ -2,7 +2,7 @@ module Qonto
   module Actions
     module Transactions
       def list_transactions(bank_account:, settled_at_from:, settled_at_to:, status: nil, current_page: nil, per_page: nil)
-        query = prepare_query(bank_account, status, current_page, per_page)
+        query = prepare_query(bank_account, settled_at_from, settled_at_to, status, current_page, per_page)
 
         response = get("/transactions", query: query)
 
