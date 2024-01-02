@@ -9,7 +9,7 @@ module Qonto
     include Qonto::Actions::Transactions
 
     API_VERSION = 'v2'.freeze
-    BASE_URL = 'https://thirdparty.qonto.eu/'.freeze
+    BASE_URL = 'https://thirdparty.qonto.com/'.freeze
     USER_AGENT = "qonto-ruby/#{VERSION}".freeze
 
     def initialize(slug:, secret_key:)
